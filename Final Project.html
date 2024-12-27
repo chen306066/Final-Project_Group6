@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project_Group 6</title>
+    <link rel="stylesheet" href="Final Project.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        nav button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background: #005bb5;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            display: none;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section.active {
+            display: block;
+        }
+
+        section h2 {
+            color: #0073e6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enlight-DeepPT </h1>
+        <p>以深度學習技術為核心，提供精準的癌症個性化治療方案。</p>
+    </header>
+
+    <nav>
+        <button data-section="introduction">前言</button>
+        <button data-section="mechanism">Enlight-DeepPT 工作原理</button>
+        <button data-section="deeplearning">「深度學習」</button>
+        <button data-section="Artificial Neural Network">「類神經網路」</button>
+        <button data-section="challenges">問題&解決辦法</button>
+        <button data-section="conclusion">結論</button>
+    </nav>
+
+    <main>
+        <section id="introduction" class="active">
+            <h2>前言</h2>
+            <p>癌症由於基因突變和分子特性的多樣性，治療方式複雜且具有挑戰性。傳統療法如化療、放療和靶向治療，往往因患者個體差異而效果不一。如何精確預測腫瘤和治療反應，並制定個性化治療方案，一直是癌症研究的關鍵問題。DeepPT AI 模型透過影像解讀和基因表達推斷，顯著提高了預測準確性，結合人工智慧和醫生的治療決策，為癌症治療提供了新的解決方案。</p>
+        </section>
+
+        <section id="mechanism">
+            <h2>Enlight-DeepPT 工作原理</h2>
+            <p>「DeepPT是一種應用深度學習的方法」</p>
+            <h3>DeepPT：選擇最佳治療方案</h3>
+            <p>1.數據收集與分析</p>
+            <li>收集患者的基因表現數據（主要是mRNA 圖譜）。</li>
+            <li>AI 模型分析基因圖譜，提取與特定療法反應相關的基因模式。</li>
+            <li>使用多種癌症患者的大量數據進行訓練，確保模型對不同癌症類型的適用性</li>
+            <p>2.治療方案預測</p>
+            <li>將患者的基因數據輸入 DeepPT模型。</li>
+            <li>預測患者對多種癌症療法（如免疫療法、靶向治療或化療）的反應。</li>
+            <li>提供排序的治療方案，推薦最可能有效的治療選擇。</li>
+            
+            <h3>ENLIGHT：個性化藥物反應預測</h3>
+            <p>1.腫瘤組織建模與模擬</p>
+            <li>ENLIGHT 模型將患者的腫瘤組織數據轉化為數位模型，分析癌細胞與微環境的互動。</li>
+            <li>模擬腫瘤對多種治療方法的可能反應，包含化療藥物和免疫療法。</li>
+            <p>2.藥物反應測試與預測</p>
+            <li>模型針對患者腫瘤特性，模擬不同藥物對腫瘤的影響。</li>
+            <li>根據模擬結果提供個性化的藥物選擇建議，提升治療效果。</li>
+            </ul>    
+        </section>
+
+        <section id="deeplearning">
+        <h2>深度學習 (Deep Learning)</h2>
+        <p>深度學習是機器學習的一個重要分支，它模仿人類大腦的方式進行數據學習和分析，主要基於多層人工神經網路的架構。訓練過程包含三個核心步驟：首先是定義網路架構，選擇一組可能的函數，透過調整參數將輸入數據轉化為預測結果。其次是設置學習目標，以目標函數的數值衡量模型表現的好壞。最後，透過數值方法進行訓練，調整權重以最小化目標函數，實現網路性能的最佳化。</p>
+        </section>
+        
+
+        <section id="Artificial Neural Network">  
+        <h2>類神經網路 (Artificial Neural Network, ANN)</h2> 
+        <p>類神經網路是一種模仿生物神經系統的數學模型，由多層神經元組成。每個神經元將上一層的輸入加總後，通過活化函數轉換成輸出，再經由權重計算傳遞到下一層神經元。多層結構的神經網路使其具備強大的非線性學習能力，能有效處理複雜數據並完成預測、分類等任務。</p>   
+        </section>  
+
+
+        <section id="challenges">
+            <h2>問題&解決辦法</h2>
+            <p>雖然模型效果顯著，但仍需解決以下問題：</p>
+            <ul>
+                <p>Q1. 其數據可能含有錯誤或不完整的病例，也可能
+                    無法辨認不同的特殊疾病，預測準確性會降低。</p>
+                <p>Ans:</p>
+                <p>1.可與其他醫療機構合作數據共享，提高資料多樣性</p>
+                <p>2.資料增強 : 影像透過翻轉、縮放等，幫助模型從不同角度觀察物</p>
+                <br>
+                <p>Q2. 怎麼確保其在不同數據的通用性，避免過度合特定的數據。</p>    
+                <p>Ans:可使用交叉驗證的方式，將數據分成多個小組，並且在這些不同的小組上訓練模型，如果它只在某些特定的小組上表現好，而在其他小組上表現差，就能發現它可能過度擬合了某些數據</p>
+
+            </ul>
+            
+        </section>
+
+        <section id="conclusion">
+            <h2>結論</h2>
+            <p>ENLIGHT-DeepPT 利用深度學習和類神經網路的技
+                術來處理大量複雜的醫療數據，從而提供精準的治療
+                建議和藥物反應預測。這些技術的加入使模型能夠
+                癌症個性化治療中發揮重要作用。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Final Project_Group 6</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('nav button');
+            const sections = document.querySelectorAll('main section');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-section');
+
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === target) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
